@@ -213,6 +213,78 @@
         "breed": "Dog - Labrador"
       }      
     ];
+    const jsonText4=[
+      {"name": "code-16",
+        "english": "Shift",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-226",
+        "english": "\\",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-90",
+        "english": "Z",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-88",
+        "english": "X",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-67",
+        "english": "C",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-86",
+        "english": "V",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-66",
+        "english": "B",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-78",
+        "english": "N",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-77",
+        "english": "M",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-188",
+        "english": ".",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-190",
+        "english": ",",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-191",
+        "english": "/",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-38",
+        "english": "▲",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-16",
+        "english": "Shift",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      }     
+    ];
 
 const BODY = document.querySelector("body");
 BODY.classList.add("wrapper");
