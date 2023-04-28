@@ -166,19 +166,19 @@ function addButton() {
   });
   jsonText2.forEach(obj => {
     text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
-    line1.insertAdjacentHTML("beforeend", text4);
+    line2.insertAdjacentHTML("beforeend", text4);
   });
   jsonText3.forEach(obj => {
     text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
-    line1.insertAdjacentHTML("beforeend", text4);
+    line3.insertAdjacentHTML("beforeend", text4);
   });
   jsonText4.forEach(obj => {
     text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
-    line1.insertAdjacentHTML("beforeend", text4);
+    line4.insertAdjacentHTML("beforeend", text4);
   });
   jsonText5.forEach(obj => {
     text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
-    line1.insertAdjacentHTML("beforeend", text4);
+    line5.insertAdjacentHTML("beforeend", text4);
   });
 }
 addButton();
