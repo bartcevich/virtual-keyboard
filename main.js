@@ -22,53 +22,53 @@
         "english": "<sup><small># </small></sup> 3",
         "russian": "Dog",
         "breed": "Dog - Labrador"
-      },
-      {"name": "code-53",
+      },      
+      {"name": "code-52",
         "english": "<sup><small>$ </small></sup> 4",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-54",
+      {"name": "code-53",
         "english": "<sup><small>% </small></sup> 5",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-55",
+      {"name": "code-54",
         "english": "<sup><small>^ </small></sup> 6",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-56",
+      {"name": "code-55",
         "english": "<sup><small>& </small></sup> 7",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-57",
+      {"name": "code-56",
         "english": "<sup><small>* </small></sup> 8",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-48",
+      {"name": "code-57",
         "english": "<sup><small>( </small></sup> 9",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-189",
+      {"name": "code-48",
         "english": "<sup><small>) </small></sup> 0",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-187",
-        "english": "<sup><small> -</small></sup>_ ",
+      {"name": "code-189",
+        "english": "<sup><small> -</small></sup> _",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-8",
+      {"name": "code-187",
         "english": "<sup><small>+ </small></sup> =",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
-      {"name": "code-52",
+      {"name": "code-8",
         "english": "Backspace",
         "russian": "Dog",
         "breed": "Dog - Labrador"
@@ -285,9 +285,58 @@
         "breed": "Dog - Labrador"
       }    
     ];
+    const jsonText5=[
+      {"name": "code-17",
+        "english": "Ctrl",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-18",
+        "english": "Alt",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-32",
+        "english": "",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-18",
+        "english": "Alt",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-17",
+        "english": "Ctrl",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-37",
+        "english": "◀",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-40",
+        "english": "▼",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      },
+      {"name": "code-39",
+        "english": "▶",
+        "russian": "Dog",
+        "breed": "Dog - Labrador"
+      } 
+    ];
 
 const BODY = document.querySelector("body");
-BODY.classList.add("wrapper");
+//BODY.classList.add("wrapper");
+let Wrapper = `
+<p id="text" class="text"></p>
+<div id="wrapper" class="wrapper"></div>`;
+//let text4 = `<p id="pop_text4"><b>Масса: </b> test </p>`;
+BODY.insertAdjacentHTML("afterbegin", Wrapper);
+
+const Div = document.querySelector("div");
 const itemsTemplate = `
   <div id="line1" class="line"></div>
   <div id="line2" class="line"></div>
@@ -295,7 +344,7 @@ const itemsTemplate = `
   <div id="line4" class="line"></div>
   <div id="line5" class="line"></div>`
 let text4 = `<p id="pop_text4"><b>Масса: </b> test </p>`;
-BODY.insertAdjacentHTML("afterbegin", itemsTemplate);
+Div.insertAdjacentHTML("afterbegin", itemsTemplate);
 
 function addButton() {
   jsonText1.forEach(obj => {
@@ -315,10 +364,10 @@ function addButton() {
     text4 = `<button class="button ${obj.name}">${obj.english}</button>`;
     line4.insertAdjacentHTML("beforeend", text4);
   });
-  //jsonText5.forEach(obj => {
-    //text4 = `<button id="${obj.name}" class="button cl${obj.name}">${obj.english}</button>`;
-    //line5.insertAdjacentHTML("beforeend", text4);
-  //});
+  jsonText5.forEach(obj => {
+    text4 = `<button class="button ${obj.name}">${obj.english}</button>`;
+    line5.insertAdjacentHTML("beforeend", text4);
+  });
 }
 addButton();
 
