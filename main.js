@@ -283,7 +283,7 @@
         "english": "Shift",
         "russian": "Dog",
         "breed": "Dog - Labrador"
-      }     
+      }    
     ];
 
 const BODY = document.querySelector("body");
@@ -299,37 +299,48 @@ BODY.insertAdjacentHTML("afterbegin", itemsTemplate);
 
 function addButton() {
   jsonText1.forEach(obj => {
-    text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
+    text4 = `<button class="button ${obj.name}">${obj.english}</button>`;
     //BODY.insertAdjacentHTML("afterbegin", text4);
     line1.insertAdjacentHTML("beforeend", text4);
   });
   jsonText2.forEach(obj => {
-    text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
+    text4 = `<button class="button ${obj.name}">${obj.english}</button>`;
     line2.insertAdjacentHTML("beforeend", text4);
   });
   jsonText3.forEach(obj => {
-    text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
+    text4 = `<button class="button ${obj.name}">${obj.english}</button>`;
     line3.insertAdjacentHTML("beforeend", text4);
   });
   jsonText4.forEach(obj => {
-    text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
+    text4 = `<button class="button ${obj.name}">${obj.english}</button>`;
     line4.insertAdjacentHTML("beforeend", text4);
   });
-  jsonText5.forEach(obj => {
-    text4 = `<button id="${obj.name}" class="button ${obj.name}">${obj.english}</button>`;
-    line5.insertAdjacentHTML("beforeend", text4);
-  });
+  //jsonText5.forEach(obj => {
+    //text4 = `<button id="${obj.name}" class="button cl${obj.name}">${obj.english}</button>`;
+    //line5.insertAdjacentHTML("beforeend", text4);
+  //});
 }
 addButton();
+
+let keyDown = 0;
 document.addEventListener("keydown", function (event) {
-  const _keyCode = event.keyCode;
-  console.log(_keyCode);
-  //let btn = document.querySelector(_keyCode);
-  //console.log(btn);
-  //if (btn) {
-    //btn.classList.toggle("btn-active");
-  //}
+  keyDown = event.keyCode;
+  keyDown = `.code-${keyDown}`;
+  console.log(keyDown);
+  //document.getElementById(keyDown).classList.add('class_close');
+  let btn = document.querySelector(keyDown);
+  console.log(btn);
+  if (btn) {
+    btn.classList.add("btn-active");
+  }
 });
 document.addEventListener("keyup", function (event){
-
+  let keyUp = `.code-${event.keyCode}`
+  console.log(keyUp);
+  let btn = document.querySelector(keyUp);
+  console.log(btn);
+  if (btn) {
+    btn.classList.remove("btn-active");
+  }
+  //document.getElementById(keyUp).classList.remove('class_close');
 });
