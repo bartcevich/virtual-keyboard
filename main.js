@@ -371,8 +371,12 @@ function addButton() {
 }
 addButton();
 
+const Text = document.querySelector("p");
 function print(){
-  
+  let clickedKey = document.getElementsByClassName("btn-active")
+  let elements = clickedKey[0].innerHTML;
+  Div.insertAdjacentHTML("afterbegin", elements);
+
 }
 
 let keyDown = 0;
@@ -386,6 +390,7 @@ document.addEventListener("keydown", function (event) {
   if (btn) {
     btn.classList.add("btn-active");
   }
+  print();
 });
 document.addEventListener("keyup", function remove(event){
   let keyUp = `.code-${event.keyCode}`
