@@ -371,6 +371,10 @@ function addButton() {
 }
 addButton();
 
+function print(){
+  
+}
+
 let keyDown = 0;
 document.addEventListener("keydown", function (event) {
   keyDown = event.keyCode;
@@ -383,7 +387,7 @@ document.addEventListener("keydown", function (event) {
     btn.classList.add("btn-active");
   }
 });
-document.addEventListener("keyup", function (event){
+document.addEventListener("keyup", function remove(event){
   let keyUp = `.code-${event.keyCode}`
   console.log(keyUp);
   let btn = document.querySelector(keyUp);
@@ -393,12 +397,13 @@ document.addEventListener("keyup", function (event){
   }
   //document.getElementById(keyUp).classList.remove('class_close');
 });
-
-//const keyElements = document.querySelectorAll('button');
-//keyElements.forEach(key => {
+ 
   document.addEventListener('click', event => {
     const clickKey = event.target;
-    //const clickedKey = clickedKeyElement.getAttribute('data-key');
-    console.log(clickKey);
+    clickKey.classList.add("btn-active");
+    //let clickedKey = document.getElementsByClassName("btn-active")
+    //let elements = clickedKey[0].innerHTML;
+    //console.log(elements);
+    //console.log(clickedKey);
   });
-//});
+
