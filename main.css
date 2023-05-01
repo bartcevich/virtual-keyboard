@@ -1,10 +1,10 @@
 body{
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 900px;
 }
 .text{
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 900px;
     height: 100px;
     padding: 2px;
     border: 10px solid rgb(227, 219, 219);
@@ -14,7 +14,7 @@ body{
 }
 .wrapper{
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 900px;
     background-color: rgb(227, 219, 219);
     padding: 10px;
     border-radius: 10px;
@@ -39,6 +39,12 @@ body{
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     transform: translate(0, 0);
     transition: transform 100ms;
+}
+.code-32{
+    min-width: 300px;
+}
+.code-9{
+    min-width: 80px;
 }
 .btn-active{
     background-color: blue;

@@ -297,7 +297,7 @@
         "breed": "Dog - Labrador"
       },
       {"name": "code-32",
-        "english": "",
+        "english": " ",
         "russian": "Dog",
         "breed": "Dog - Labrador"
       },
