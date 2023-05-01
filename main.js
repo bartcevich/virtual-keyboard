@@ -375,7 +375,7 @@ const Text = document.querySelector("p");
 function print(){
   let clickedKey = document.getElementsByClassName("btn-active")
   let elements = clickedKey[0].innerHTML;
-  Div.insertAdjacentHTML("afterbegin", elements);
+  Text.insertAdjacentHTML("beforeend", elements);
 
 }
 
@@ -403,12 +403,17 @@ document.addEventListener("keyup", function remove(event){
   //document.getElementById(keyUp).classList.remove('class_close');
 });
  
-  document.addEventListener('click', event => {
+  document.addEventListener('mousedown', event => {
     const clickKey = event.target;
     clickKey.classList.add("btn-active");
-    //let clickedKey = document.getElementsByClassName("btn-active")
-    //let elements = clickedKey[0].innerHTML;
-    //console.log(elements);
-    //console.log(clickedKey);
+    print();
+    //clickKey.classList.remove("btn-active");
+  });
+
+  document.addEventListener('mouseup', event => {
+    const clickKeyup = event.target;
+    clickKeyup.classList.remove("btn-active");
+    //print();
+    //clickKey.classList.remove("btn-active");
   });
 
