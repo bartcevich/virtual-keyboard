@@ -378,7 +378,7 @@ document.addEventListener("keydown", function (event) {
   console.log(keyDown);
   //document.getElementById(keyDown).classList.add('class_close');
   let btn = document.querySelector(keyDown);
-  console.log(btn);
+  //console.log(btn);
   if (btn) {
     btn.classList.add("btn-active");
   }
@@ -387,9 +387,18 @@ document.addEventListener("keyup", function (event){
   let keyUp = `.code-${event.keyCode}`
   console.log(keyUp);
   let btn = document.querySelector(keyUp);
-  console.log(btn);
+  //console.log(btn);
   if (btn) {
     btn.classList.remove("btn-active");
   }
   //document.getElementById(keyUp).classList.remove('class_close');
 });
+
+//const keyElements = document.querySelectorAll('button');
+//keyElements.forEach(key => {
+  document.addEventListener('click', event => {
+    const clickKey = event.target;
+    //const clickedKey = clickedKeyElement.getAttribute('data-key');
+    console.log(clickKey);
+  });
+//});
